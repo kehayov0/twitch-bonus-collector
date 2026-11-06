@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Twitch Bonus Collector",
+  "version": "1.0",
+  "description": "Clicks the Twitch channel points bonus chest the moment it appears.",
+  "content_scripts": [
+    {
+      "matches": ["https://www.twitch.tv/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
