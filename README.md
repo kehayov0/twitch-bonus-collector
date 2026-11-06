@@ -52,9 +52,9 @@ collapse into one `querySelector`.
 selector works today and silently dies next week. Accessibility metadata is far
 more stable. The older `data-a-target` form is kept as a fallback.
 
-**Stale references are re-queried.** Twitch can re-render during the 1–3 second
+**Stale references are re-queried.** Twitch can re-render during the 1-3 second
 delay, which would leave a previously captured handle pointing at a detached
-node — the click would succeed silently and do nothing. The button is looked up
+node - the click would succeed silently and do nothing. The button is looked up
 again immediately before clicking, and `isConnected` is checked.
 
 **Defensive storage.** `localStorage` throws outright, rather than returning
@@ -67,7 +67,7 @@ so a throw can't kill the script before the observer attaches.
   first landed on. The observer is attached to `document.body` and survives
   channel changes, so this is cosmetic.
 - Only matches `https://www.twitch.tv/*`.
-- English UI assumed — the selector looks for "Bonus" in the `aria-label`.
+- English UI assumed - the selector looks for "Bonus" in the `aria-label`.
 
 ## Licence
 
